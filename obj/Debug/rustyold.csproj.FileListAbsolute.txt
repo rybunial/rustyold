@@ -1,0 +1,13 @@
+C:\proj\nowa_gra\czesc1\rustyold\obj\Debug\rustyold.csprojAssemblyReference.cache
+C:\proj\nowa_gra\czesc1\rustyold\obj\Debug\rustyold.Properties.Resources.resources
+C:\proj\nowa_gra\czesc1\rustyold\obj\Debug\rustyold.rustyold.resources
+C:\proj\nowa_gra\czesc1\rustyold\obj\Debug\rustyold.csproj.GenerateResource.cache
+C:\proj\nowa_gra\czesc1\rustyold\obj\Debug\rustyold.csproj.CoreCompileInputs.cache
+C:\proj\nowa_gra\czesc1\rustyold\bin\Debug\rustyold.exe.config
+C:\proj\nowa_gra\czesc1\rustyold\bin\Debug\rustyold.exe
+C:\proj\nowa_gra\czesc1\rustyold\bin\Debug\rustyold.pdb
+C:\proj\nowa_gra\czesc1\rustyold\bin\Debug\engine.dll
+C:\proj\nowa_gra\czesc1\rustyold\bin\Debug\engine.pdb
+C:\proj\nowa_gra\czesc1\rustyold\obj\Debug\rustyold.csproj.CopyComplete
+C:\proj\nowa_gra\czesc1\rustyold\obj\Debug\rustyold.exe
+C:\proj\nowa_gra\czesc1\rustyold\obj\Debug\rustyold.pdb
