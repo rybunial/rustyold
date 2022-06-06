@@ -15,77 +15,117 @@ namespace rustyold
     {
         public player _player;
         public maps _maps;
-        public int postacx = 100;
+        public int postacx = 20;
         public int postacy = 100;
         public void engine(int pozycjax, int pozycjay)
         {
             rtbtext.Text =pozycjax.ToString() + ' ' + pozycjay.ToString();
-            if (pozycjax == 300 && pozycjay == 100)
+            if (pozycjax == 250 && pozycjay == 120)
             { 
                 rtbtext.Text = "Dotarles do zamku";
+            }
+
+            if (pozycjax == 20 && pozycjay == 320)
+            {
+                rtbtext.Text = "Dotarles do kopalni";
             }
         }
         public rustyold()
         {
             InitializeComponent();
-
+            rtbtext.Text = "Witaj w Rusty Old";
             _player = new player(0, 0, 0);
             
             _player.Inventory.Add(new InventoryItem("Text"));
             _maps = new maps();
             //  rtbworld.Visible = false;
-            dgvworld.SendToBack();
+            // dgvworld.SendToBack();
             int ilo = 0;
 
      
             foreach (wlr wlrs in _maps.Wlrs)
             {
-                int pozx0 = 50;
-                int pozy0 = 30;
-                for (int pozy = 1; pozy < 30; pozy++)
+                ilo++;
+                if (wlrs.Obiekt == " ")
                 {
-                    pozy0 = pozy0 + 10;
-                    for (int pozx = 1; pozx < 44; pozx++)
+                    var lab = new Label
                     {
-                        if (pozx == 1)
-                        {
-                            pozx0 = 21;
-                        }
-                        else
-                        {
-                            pozx0 = pozx0 + 19;
-                        }
-                        // Wlrs.Add(new wlr(pozx0, pozy0, pozycja[pozy, pozx].ToString()));
 
-                        rtbworld.Text = _maps.Wlrs[1].ToString();
-                        
-                        String nazwa = pozx0.ToString() + ' ' + pozy0.ToString() + ' ' + pozycja[pozy, pozx].ToString();
-                        Console.WriteLine(nazwa);
-
-                    }
-                    pozx0 = 21;
-                }
-                /*  ilo++;
-
-                   var lab = new Label
-                   {
-
-                       Name = "label" + ilo,
-                       Size = new Size(20, 20),
-                       ForeColor = Color.White,
-                       BackColor = Color.DarkOliveGreen,
-                       Location = new Point(wlrs.Pozycjax, wlrs.Pozycjay),
+                        Name = "label" + ilo,
+                        Size = new Size(20, 15),
+                        ForeColor = Color.White,
+                        BackColor = Color.Brown,
+                        Location = new Point(wlrs.Pozycjax, wlrs.Pozycjay),
 
                         Text = wlrs.Obiekt,
 
 
-                   };
+                    };
+                    this.Controls.Add(lab);
+                }
+                else if (wlrs.Obiekt == "#")
+                {
 
-                   this.Controls.Add(lab);*//
-             //   dgvworld. = wlrs.Obiekt.ToString();
-               // lab.BringToFront();
+                    var lab = new Label
+                    {
+
+                        Name = "label" + ilo,
+                        Size = new Size(20, 15),
+                        ForeColor = Color.White,
+                        BackColor = Color.Black,
+                        Location = new Point(wlrs.Pozycjax, wlrs.Pozycjay),
+
+                        Text = wlrs.Obiekt,
+
+
+                    };
+
+                    this.Controls.Add(lab);
+                }
+                else if (wlrs.Obiekt == "$")
+                {
+
+                    var lab = new Label
+                    {
+
+                        Name = "label" + ilo,
+                        Size = new Size(20, 15),
+                        ForeColor = Color.White,
+                        BackColor = Color.Yellow,
+                        Location = new Point(wlrs.Pozycjax, wlrs.Pozycjay),
+
+                        Text = wlrs.Obiekt,
+
+
+                    };
+
+                    this.Controls.Add(lab);
+                }
+                else
+                {
+
+                    var lab = new Label
+                    {
+
+                        Name = "label" + ilo,
+                        Size = new Size(20, 15),
+                        ForeColor = Color.White,
+                        BackColor = Color.DarkOliveGreen,
+                        Location = new Point(wlrs.Pozycjax, wlrs.Pozycjay),
+
+                        Text = wlrs.Obiekt,
+
+
+                    };
+
+                    this.Controls.Add(lab);
+                }
                 
-                rtbtext.Text = ilo.ToString() + '-' + wlrs.Pozycjax.ToString() + '-' + wlrs.Pozycjay.ToString();
+                
+                //   dgvworld. = wlrs.Obiekt.ToString();
+              //lab.BringToFront();
+
+            //    rtbtext.Text = ilo.ToString() + '-' + wlrs.Pozycjax.ToString() + '-' + wlrs.Pozycjay.ToString();
             }
             lblexp.Text = _player.Exp.ToString();
             lblGold.Text = _player.Gold.ToString();

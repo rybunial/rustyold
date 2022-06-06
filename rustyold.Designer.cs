@@ -40,7 +40,6 @@
             this.btndol = new System.Windows.Forms.Button();
             this.btnprawo = new System.Windows.Forms.Button();
             this.postac = new System.Windows.Forms.Label();
-            this.rtbworld = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -150,19 +149,11 @@
             this.postac.AutoSize = true;
             this.postac.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.postac.ForeColor = System.Drawing.Color.Snow;
-            this.postac.Location = new System.Drawing.Point(18, 48);
+            this.postac.Location = new System.Drawing.Point(20, 100);
             this.postac.Name = "postac";
             this.postac.Size = new System.Drawing.Size(19, 13);
-            this.postac.TabIndex = 12;
+            this.postac.TabIndex = 14;
             this.postac.Text = "<>";
-            // 
-            // rtbworld
-            // 
-            this.rtbworld.Location = new System.Drawing.Point(12, 48);
-            this.rtbworld.Name = "rtbworld";
-            this.rtbworld.Size = new System.Drawing.Size(860, 336);
-            this.rtbworld.TabIndex = 13;
-            this.rtbworld.Text = "";
             // 
             // rustyold
             // 
@@ -181,7 +172,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblGold);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.rtbworld);
             this.Name = "rustyold";
             this.Text = "MyGame";
             this.ResumeLayout(false);
@@ -202,7 +192,6 @@
         private System.Windows.Forms.Button btndol;
         private System.Windows.Forms.Button btnprawo;
         private System.Windows.Forms.Label postac;
-        private System.Windows.Forms.RichTextBox rtbworld;
     }
 }
 
